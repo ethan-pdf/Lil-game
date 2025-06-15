@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11099683}
   - component: {fileID: 11099682}
+  - component: {fileID: 11099684}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -206,6 +207,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11099684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11099681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b118da870adc9cb43a51c7bb2cfebecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  Damage: 0
 --- !u!1 &93378602
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +723,7 @@ GameObject:
   - component: {fileID: 438917897}
   - component: {fileID: 438917896}
   - component: {fileID: 438917895}
+  - component: {fileID: 438917898}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -757,10 +773,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.04995039, b: 0, a: 1}
+    m_PressedColor: {r: 0.8490566, g: 0.51845825, b: 0.21226415, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.2264151, g: 0.0501958, b: 0.0501958, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -778,7 +794,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 438917896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 52c727b7e2e3c6f43bced2613e9e5d49, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &438917896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +845,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438917893}
   m_CullTransparentMesh: 1
+--- !u!114 &438917898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438917893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c727b7e2e3c6f43bced2613e9e5d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackButton: {fileID: 438917895}
+  user: {fileID: 11099684}
+  baddie: {fileID: 1603307802}
 --- !u!1 &517779978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603307801}
   - component: {fileID: 1603307800}
+  - component: {fileID: 1603307802}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1842,6 +1886,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603307802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603307799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc59325f4268dd4da4279d069935aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 0
+  Damage: 0
 --- !u!1 &1906748299
 GameObject:
   m_ObjectHideFlags: 0
