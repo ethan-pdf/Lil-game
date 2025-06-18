@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     public int Health;
     public int Damage;
+    public Health healthBar;
 
 
 
@@ -11,12 +12,14 @@ public class Player : MonoBehaviour
     {
         Health = 10;
         Damage = 1;
+        healthBar.SetMaxHealth(Health);
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        healthBar.SetCurrentHealth(Health);
     }
 }

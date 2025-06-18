@@ -26,7 +26,7 @@ public class Attack : MonoBehaviour
     void AttackPress(Player p, Enemy e)
     {
 
-        e.Health -= 1;
+        p.Health -= 1;
         Debug.Log("Attacked");
         Debug.Log("Player HP: " + e.Health);
         checkHealth(e);
